@@ -25,12 +25,21 @@ and split the tree into many smaller trees; what do you need to know about the
 smaller trees to find the diameter of the larger tree? 
 """
 
-def tree_diameter(tree):
+def tree_diameter(T):
     """given a tree as a pair, the vertex set and adjacency lists, return
     the diameter of the tree"""
-    V, E = tree
+    V, E = T
     #complete the function here
-    return #diameter
+    #uncomplete
+    root = ''
+    for v in V:
+        if len(E[v]) == 2:
+            root = v
+            break
+    
+    lDiameter = 1 + tree_diameter(rT)
+    rDiameter = 1 + tree_diameter(lT)
+    return max(max(rDiameter,lDiameter),)
 
 ###################################################
 
